@@ -2,9 +2,12 @@ import telebot
 import requests
 import time
 
-domens = ['.ru', '.com', '.рф', '.net', '.org', '.ru.net', '.pro', '.ua', ]
+# Токен от телеграм бота
+token = ""
+# Домены верхнего уровня 
+domens = ['.ru', '.com', '.рф', '.net', '.org', '.ru.net', '.pro', '.ua']
 
-bot = telebot.TeleBot("6200720876:AAEKwg9_Igs5IkN6HcEmul57giwh5Xe7I6I")
+bot = telebot.TeleBot(token)
 
 @bot.message_handler(commands=['start'])
 def welcome(message):
